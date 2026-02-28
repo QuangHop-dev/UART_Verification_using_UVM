@@ -67,7 +67,8 @@ Below is the block diagram of the UART IP:
 <p align="center">
   <img width="872" height="416" alt="Block diagram of UVM environment construction for UART design testing" src="https://github.com/user-attachments/assets/7ba78d0b-8882-4c8b-8c95-e24adb34b6fb" />
 </p>
-# UVM Testbench Topology & Factory Registrations
+
+### UVM Testbench Topology & Factory Registrations
 <p align="center">
   <img width="433" height="319" alt="UVM topology of the UART test environment" src="https://github.com/user-attachments/assets/6bb5f864-3a72-4aa5-a3d3-2824d55ca59e" />
 </p>
@@ -79,4 +80,41 @@ Below is the block diagram of the UART IP:
 <p align="center">
   <img width="1262" height="715" alt="Simulation results of the UART transmission and reception function" src="https://github.com/user-attachments/assets/9ee4d5d8-7b6e-4fdf-87fc-e85184afb170" />
 </p>
+
+### FSM Of TX and RX & FIFO Behavior
+
+- TX/n_reg is the current state of the TX and RX/n_reg is the same for RX and FSM starts when start bit 0 arrives.
+- States are {start , Data Transfer/Receiving , Parity , End}.
+- Also FIFO_RX is the fifo of the RX and the w_data is the data that received by the RX (when the receiver receives a bit the shift register will add it).
+- In FIFO_RX/r_data is the read data in FIFO and it will extract the data from the fifo when a read signal arrives.
+
+<p align="center">
+  <img width="1231" height="734" alt="Simulation results of FSM for TXRX and data pushread mechanism via FIFO_RX" src="https://github.com/user-attachments/assets/5425d35c-a1d6-4e7a-955c-b0e200448e87" />
+</p>
+
+### Data Flow
+- rx_data_out signal also represents a shift register to the received data (look how the data flow in the register).
+
+<p align="center">
+  <img width="1214" height="710" alt="data_flow simulation results" src="https://github.com/user-attachments/assets/9d19d984-28e1-48ee-8c9c-c83f963233f8" />
+</p>
+
+## Results of the testbench
+- Match is counting the success receiving and mismatch is the opposite.
+
+<p align="center">
+  <img width="1230" height="785" alt="Simulation results (log)" src="https://github.com/user-attachments/assets/de542816-8693-4b0d-9084-eee787747c55" />
+</p>
+
+### Report Summary
+<p align="center">
+  <img width="627" height="211" alt="UVM report summary results" src="https://github.com/user-attachments/assets/2e09b7db-51bb-4c15-b939-48716e797366" />
+</p>
+
+## Coverage Result
+<p align="center">
+  <img width="627" height="230" alt="Summary of coverage report results for verify plan" src="https://github.com/user-attachments/assets/1c701ca8-3148-4b84-a237-7e8df2560206" />
+</p>
+
+
 

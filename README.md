@@ -7,9 +7,9 @@
 - **Simulation**: Run on QuestaSim with detailed logs and waveform analysis.
 
 
-## UART Frame Structure (8N1 with Optional Parity)
+## UART Frame Structure
 
-A UART frame consists of:
+### UART frame consists of:
 
 - **Start Bit** – Always `0` (low), indicating the beginning of a frame  
 - **8 Data Bits** – Transmitted LSB (least significant bit) first  
@@ -17,10 +17,11 @@ A UART frame consists of:
 - **Stop Bit** – Always `1` (high), indicating the end of a frame  
 
 
-# UART Frame Illustration
+### UART Frame Illustration
 <p align="center">
   <img width="880" height="128" alt="UART frame format" src="https://github.com/user-attachments/assets/5c713b74-d1e5-4601-a40b-5e95de6dd5b5" />
 </p>
+
 ## UART DESIGN
 
 ### Design Overview
@@ -39,7 +40,7 @@ Below is the block diagram of the UART IP:
 </p>
 
 
-# Table. UART IP Interface Signal Description
+### Table. UART IP Interface Signal Description
 <div align="center">
   
   | Signal         | Direction | Description |
@@ -62,7 +63,7 @@ Below is the block diagram of the UART IP:
 </div>
 
 ## UVM Testbench
-# UVM environment structure
+### UVM environment structure
 <p align="center">
   <img width="872" height="416" alt="Block diagram of UVM environment construction for UART design testing" src="https://github.com/user-attachments/assets/7ba78d0b-8882-4c8b-8c95-e24adb34b6fb" />
 </p>
@@ -70,8 +71,11 @@ Below is the block diagram of the UART IP:
 <p align="center">
   <img width="433" height="319" alt="UVM topology of the UART test environment" src="https://github.com/user-attachments/assets/6bb5f864-3a72-4aa5-a3d3-2824d55ca59e" />
 </p>
-# Data Transmitting and receiving
-- **•	w_data signal is the write data at the TX and the r_data signal is the read data at the RX.
+
+### Data Transmitting and receiving
+
+- w_data signal is the write data at the TX and the r_data signal is the read data at the RX.
+
 <p align="center">
   <img width="1262" height="715" alt="Simulation results of the UART transmission and reception function" src="https://github.com/user-attachments/assets/9ee4d5d8-7b6e-4fdf-87fc-e85184afb170" />
 </p>

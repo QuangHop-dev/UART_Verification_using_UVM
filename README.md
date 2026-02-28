@@ -34,7 +34,9 @@ The overall data flow is as follows:
 - Serial input (`rx`) → `UART_RX` → `FIFO_RX` → Read operation
 
 Below is the block diagram of the UART IP:
-<img width="885" height="491" alt="Block diagram of the IP UART design" src="https://github.com/user-attachments/assets/1f944b52-62f1-4e1f-96be-ff030aeb9e16" />
+<p align="center">
+  <img width="885" height="491" alt="Block diagram of the IP UART design" src="https://github.com/user-attachments/assets/1f944b52-62f1-4e1f-96be-ff030aeb9e16" />
+</p>
 
 
 # Table. UART IP Interface Signal Description

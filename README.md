@@ -61,4 +61,18 @@ Below is the block diagram of the UART IP:
   
 </div>
 
+## UVM Testbench
+# UVM environment structure
+<p align="center">
+  <img width="872" height="416" alt="Block diagram of UVM environment construction for UART design testing" src="https://github.com/user-attachments/assets/7ba78d0b-8882-4c8b-8c95-e24adb34b6fb" />
+</p>
+# UVM Testbench Topology & Factory Registrations
+<p align="center">
+  <img width="433" height="319" alt="UVM topology of the UART test environment" src="https://github.com/user-attachments/assets/6bb5f864-3a72-4aa5-a3d3-2824d55ca59e" />
+</p>
+# Data Transmitting and receiving
+- **•	w_data signal is the write data at the TX and the r_data signal is the read data at the RX.
+<p align="center">
+  <img width="1262" height="715" alt="Simulation results of the UART transmission and reception function" src="https://github.com/user-attachments/assets/9ee4d5d8-7b6e-4fdf-87fc-e85184afb170" />
+</p>
 

@@ -41,22 +41,24 @@ Below is the block diagram of the UART IP:
 
 # Table. UART IP Interface Signal Description
 <div align="center">
-| Signal         | Direction | Description |
-|:-------------:|:---------:|:----------:|
-| clk           | Input     | System clock for the entire UART IP |
-| reset         | Input     | Reset signal that initializes the system to its default state |
-| wr_uart       | Input     | Write enable signal for FIFO_TX (request to transmit data) |
-| w_data[7:0]   | Input     | 8-bit data input to FIFO_TX for transmission |
-| divsr[9:0]    | Input     | Baud rate divisor used to generate transmit/receive timing |
-| rd_uart       | Input     | Read enable signal for FIFO_RX (read received data) |
-| rx            | Input     | Serial input signal |
-| tx            | Output    | Serial output signal |
-| tx_done       | Output    | Indicates completion of one frame/byte transmission |
-| tx_full       | Output    | Indicates FIFO_TX is full (cannot accept more data) |
-| r_data[7:0]   | Output    | 8-bit data output from FIFO_RX |
-| rx_empty      | Output    | Indicates FIFO_RX is empty (no data available) |
-| rx_done       | Output    | Indicates completion of one frame/byte reception |
-| incorrect_send| Output    | Indicates an invalid or corrupted received frame |
+  
+  | Signal         | Direction | Description |
+  |:-------------:|:---------:|:----------:|
+  | clk           | Input     | System clock for the entire UART IP |
+  | reset         | Input     | Reset signal that initializes the system to its default state |
+  | wr_uart       | Input     | Write enable signal for FIFO_TX (request to transmit data) |
+  | w_data[7:0]   | Input     | 8-bit data input to FIFO_TX for transmission |
+  | divsr[9:0]    | Input     | Baud rate divisor used to generate transmit/receive timing |
+  | rd_uart       | Input     | Read enable signal for FIFO_RX (read received data) |
+  | rx            | Input     | Serial input signal |
+  | tx            | Output    | Serial output signal |
+  | tx_done       | Output    | Indicates completion of one frame/byte transmission |
+  | tx_full       | Output    | Indicates FIFO_TX is full (cannot accept more data) |
+  | r_data[7:0]   | Output    | 8-bit data output from FIFO_RX |
+  | rx_empty      | Output    | Indicates FIFO_RX is empty (no data available) |
+  | rx_done       | Output    | Indicates completion of one frame/byte reception |
+  | incorrect_send| Output    | Indicates an invalid or corrupted received frame |
+  
 </div>
 
 

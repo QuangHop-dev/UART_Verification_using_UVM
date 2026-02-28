@@ -40,9 +40,9 @@ Below is the block diagram of the UART IP:
 
 
 # Table. UART IP Interface Signal Description
-<p align="center">
+<div align="center">
 | Signal         | Direction | Description |
-|---------------|-----------|------------|
+|:-------------:|:---------:|:----------:|
 | clk           | Input     | System clock for the entire UART IP |
 | reset         | Input     | Reset signal that initializes the system to its default state |
 | wr_uart       | Input     | Write enable signal for FIFO_TX (request to transmit data) |
@@ -57,6 +57,6 @@ Below is the block diagram of the UART IP:
 | rx_empty      | Output    | Indicates FIFO_RX is empty (no data available) |
 | rx_done       | Output    | Indicates completion of one frame/byte reception |
 | incorrect_send| Output    | Indicates an invalid or corrupted received frame |
-</p>
+</div>
 
 

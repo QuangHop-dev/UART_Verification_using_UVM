@@ -18,9 +18,9 @@ A UART frame consists of:
 
 
 # UART Frame Illustration
-
-<img width="880" height="128" alt="UART frame format" src="https://github.com/user-attachments/assets/5c713b74-d1e5-4601-a40b-5e95de6dd5b5" />
-
+<p align="center">
+  <img width="880" height="128" alt="UART frame format" src="https://github.com/user-attachments/assets/5c713b74-d1e5-4601-a40b-5e95de6dd5b5" />
+</p>
 ## UART DESIGN
 
 ### Design Overview
@@ -40,7 +40,7 @@ Below is the block diagram of the UART IP:
 
 
 # Table. UART IP Interface Signal Description
-
+<p align="center">
 | Signal         | Direction | Description |
 |---------------|-----------|------------|
 | clk           | Input     | System clock for the entire UART IP |
@@ -57,3 +57,6 @@ Below is the block diagram of the UART IP:
 | rx_empty      | Output    | Indicates FIFO_RX is empty (no data available) |
 | rx_done       | Output    | Indicates completion of one frame/byte reception |
 | incorrect_send| Output    | Indicates an invalid or corrupted received frame |
+</p>
+
+
